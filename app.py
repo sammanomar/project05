@@ -20,12 +20,43 @@ with st.sidebar:
 
     selected = option_menu('Diseases Prediction System',
 
-                           ['Diabetes Prediction',
+                           ['Project Summary',
+                            'Diabetes Prediction',
                             'Heart Disease Prediction',
                             'Parkinsons Prediction'],
                            icons=['activity', 'heart', 'person'],
                            default_index=0)
 
+# Summary Page
+if (selected == 'Project Summary'):
+    st.write("### Quick Project Summary")
+
+    st.info(
+        f"**General Information**\n"
+        f"* Malaria is a parasitic infection transmitted by the bite of infected female "
+        f"Anopheles mosquitoes.\n"
+        f"* A blood smear sample is collected, mixed with a reagent and examined in "
+        f"the microscope. Visual criteria are used to detect malaria parasites.\n"
+        f"* According to [WHO](https://www.who.int/news-room/fact-sheets/detail/malaria), "
+        f"in 2019, there were an estimated  229 million cases of malaria worldwide and an "
+        f"estimated 409 thousand deaths due to this disease. "
+        f"Children <5 years are the most vulnerable group, accounting for 67% (274 thousand) "
+        f"of all malaria deaths worldwide in 2019.\n\n"
+        f"**Project Dataset**\n"
+        f"* The available dataset contains 5643 out of +27 thousand images taken from "
+        f"blood smear workflow (when a drop of blood is taken on a glass slide) of "
+        f"malaria-parasitised and uninfected cells.")
+
+    st.write(
+        f"* For additional information, please visit and **read** the "
+        f"[Project README file](https://github.com/Code-Institute-Solutions/WalkthroughProject01/blob/main/README.md).")
+
+    st.success(
+        f"The project has 2 business requirements:\n"
+        f"* 1 - The client is interested in having a study to differentiate "
+        f"a parasitized and uninfected cell visually.\n"
+        f"* 2 - The client is interested in telling whether a given cell contains a malaria parasite or not. "
+    )
 
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
@@ -37,29 +68,29 @@ if (selected == 'Diabetes Prediction'):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        Pregnancies = st.text_input('Number of Pregnancies')
+        Pregnancies = st.sidebar.slider('Number of Pregnancies', 0, 17, 3)
 
     with col2:
-        Glucose = st.text_input('Glucose Level')
+        Glucose = st.sidebar.slider('Glucose Level', 0, 200, 120)
 
     with col3:
-        BloodPressure = st.text_input('Blood Pressure value')
+        BloodPressure = st.sidebar.slider('Blood Pressure value', 0, 122, 70)
 
     with col1:
-        SkinThickness = st.text_input('Skin Thickness value')
+        SkinThickness = st.sidebar.slider('Skin Thickness value', 0, 100, 20)
 
     with col2:
-        Insulin = st.text_input('Insulin Level')
+        Insulin = st.sidebar.slider('Insulin Level', 0, 846, 79)
 
     with col3:
-        BMI = st.text_input('BMI value')
+        BMI = st.sidebar.slider('BMI value', 0, 67, 20)
 
     with col1:
-        DiabetesPedigreeFunction = st.text_input(
-            'Diabetes Pedigree Function value')
+        DiabetesPedigreeFunction = st.sidebar.slider(
+            'Diabetes Pedigree Function value', 0.0, 2.4, 0.47)
 
     with col2:
-        Age = st.text_input('Age of the Person')
+        Age = st.sidebar.slider('Age of the Person', 21, 88, 33)
 
     # code for Prediction
     diab_diagnosis = ''
