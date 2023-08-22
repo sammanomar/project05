@@ -110,32 +110,32 @@ if (selected == 'Heart Disease Prediction'):
 
     sex = st.sidebar.slider('Sex', 0, 1)
 
-    cp = st.sidebar.slider('Chest Pain types', 0, 1, 3)
+    cp = st.sidebar.slider('Chest Pain types', 0, 3, 1)
 
-    trestbps = st.sidebar.slider('Resting Blood Pressure', 94, 132, 200)
+    trestbps = st.sidebar.slider('Resting Blood Pressure', 94, 200, 132)
 
-    chol = st.sidebar.slider('Serum Cholestoral in mg/dl', 126, 246, 564)
+    chol = st.sidebar.slider('Serum Cholestoral in mg/dl', 126, 564, 246)
 
     fbs = st.sidebar.slider('Fasting Blood Sugar > 120 mg/dl', 0, 1)
 
     restecg = st.sidebar.slider(
-        'Resting Electrocardiographic results', 0, 1, 2)
+        'Resting Electrocardiographic results', 0, 2, 1)
 
     thalach = st.sidebar.slider(
-        'Maximum Heart Rate achieved', 71, 150, 202)
+        'Maximum Heart Rate achieved', 71, 202, 150)
 
     exang = st.sidebar.slider('Exercise Induced Angina', 0, 1)
 
     oldpeak = st.sidebar.slider(
-        'ST depression induced by exercise', float(0), float(1), float(6.2))
+        'ST depression induced by exercise', float(0), float(6.2), float(1))
 
     slope = st.sidebar.slider(
-        'Slope of the peak exercise ST segment', 0, 1, 2)
+        'Slope of the peak exercise ST segment', 0, 2, 1)
 
-    ca = st.sidebar.slider('Major vessels colored by flourosopy', 0, 1, 4)
+    ca = st.sidebar.slider('Major vessels colored by flourosopy', 0, 4, 1)
 
     thal = st.sidebar.slider(
-        'thal: 0 = normal; 1 = fixed defect; 2 = reversable defect', 0, 2, 3)
+        'thal: 0 = normal; 1 = fixed defect; 2 = reversable defect', 0, 3, 2)
 
     # code for Prediction
     heart_diagnosis = ''
@@ -160,53 +160,53 @@ if (selected == "Parkinsons Prediction"):
     # page title
     st.title("Parkinson's Disease Prediction using ML")
 
-    fo = st.sidebar.slider('MDVP:Fo(Hz)', 88.333, 154.229, 260.105)
+    fo = st.sidebar.slider('MDVP:Fo(Hz)', 88.333, 260.105, 154.229)
 
-    fhi = st.sidebar.slider('MDVP:Fhi(Hz)', 102.145, 197.105, 592.030)
+    fhi = st.sidebar.slider('MDVP:Fhi(Hz)', 102.145, 592.030, 197.105)
 
-    flo = st.sidebar.slider('MDVP:Flo(Hz)', 65.476, 116.325, 239.170)
+    flo = st.sidebar.slider('MDVP:Flo(Hz)', 65.476, 239.170, 116.325)
 
     Jitter_percent = st.sidebar.slider(
-        'MDVP:Jitter(%)', 0.00168, 0.00622, 0.03316)
+        'MDVP:Jitter(%)', 0.00168, 0.03316,  0.00622)
 
     Jitter_Abs = st.sidebar.slider(
-        'MDVP:Jitter(Abs)', 0.00001, 0.00004, 0.00026)
+        'MDVP:Jitter(Abs)', 0.00001, 0.00026, 0.00004)
 
-    RAP = st.sidebar.slider('MDVP:RAP', 0.00068, 0.00331, 0.02144)
+    RAP = st.sidebar.slider('MDVP:RAP', 0.00068, 0.02144, 0.00331)
 
-    PPQ = st.sidebar.slider('MDVP:PPQ', 0.00092, 0.00345, 0.01958)
+    PPQ = st.sidebar.slider('MDVP:PPQ', 0.00092, 0.01958, 0.00345)
 
-    DDP = st.sidebar.slider('Jitter:DDP', 0.00204, 0.00992, 0.06433)
+    DDP = st.sidebar.slider('Jitter:DDP', 0.00204, 0.06433, 0.00992)
 
     Shimmer = st.sidebar.slider(
-        'MDVP:Shimmer', 0.00954, 0.02971, 0.11908)
+        'MDVP:Shimmer', 0.00954, 0.11908, 0.02971)
 
     Shimmer_dB = st.sidebar.slider(
-        'MDVP:Shimmer(dB)', 0.085, 0.282, 1.302)
+        'MDVP:Shimmer(dB)', 0.085, 1.302, 0.282)
 
-    APQ3 = st.sidebar.slider('Shimmer:APQ3', 0.00455, 0.01566, 0.05647)
+    APQ3 = st.sidebar.slider('Shimmer:APQ3', 0.00455, 0.05647, 0.01566)
 
-    APQ5 = st.sidebar.slider('Shimmer:APQ5', 0.0057, 0.01788, 0.0794)
+    APQ5 = st.sidebar.slider('Shimmer:APQ5', 0.00570, 0.07940, 0.01788)
 
-    APQ = st.sidebar.slider('MDVP:APQ', 0.00719, 0.02408, 0.13778)
+    APQ = st.sidebar.slider('MDVP:APQ', 0.00719, 0.13778, 0.02408)
 
-    DDA = st.sidebar.slider('Shimmer:DDA', 0.01364, 0.04699, 0.16942)
+    DDA = st.sidebar.slider('Shimmer:DDA', 0.01364, 0.16942, 0.04699)
 
-    NHR = st.sidebar.slider('NHR', 0.00065, 0.02485, 0.31482)
+    NHR = st.sidebar.slider('NHR', 0.00065, 0.31482, 0.02485)
 
-    HNR = st.sidebar.slider('HNR', 8.441, 21.886, 33.047)
+    HNR = st.sidebar.slider('HNR', 8.441, 33.047, 21.886)
 
-    RPDE = st.sidebar.slider('RPDE', 0.256570, 0.498536, 0.685151)
+    RPDE = st.sidebar.slider('RPDE', 0.256570, 0.685151, 0.498536)
 
-    DFA = st.sidebar.slider('DFA', 0.574282, 0.718099, 0.825288)
+    DFA = st.sidebar.slider('DFA', 0.574282, 0.825288, 0.718099)
 
-    spread1 = st.sidebar.slider('spread1', -7.964984, -5.684397, -2.434031)
+    spread1 = st.sidebar.slider('spread1', -7.964984, -2.434031, -5.684397)
 
-    spread2 = st.sidebar.slider('spread2', 0.006274, 0.226510, 0.450493)
+    spread2 = st.sidebar.slider('spread2', 0.006274, 0.450493, 0.226510)
 
-    D2 = st.sidebar.slider('D2', 1.423287, 2.381826, 3.671155)
+    D2 = st.sidebar.slider('D2', 1.423287, 3.671155, 2.381826)
 
-    PPE = st.sidebar.slider('PPE', 0.044539, 0.206552, 0.527367)
+    PPE = st.sidebar.slider('PPE', 0.044539, 0.527367, 0.206552)
 
     # code for Prediction
     parkinsons_diagnosis = ''
