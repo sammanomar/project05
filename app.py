@@ -65,32 +65,23 @@ if (selected == 'Diabetes Prediction'):
     st.title('Diabetes Prediction using ML')
 
     # getting the input data from the user
-    col1, col2, col3 = st.columns(3)
 
-    with col1:
-        Pregnancies = st.sidebar.slider('Number of Pregnancies', 0, 17, 3)
+    Pregnancies = st.sidebar.slider('Number of Pregnancies', 0, 17, 3)
 
-    with col2:
-        Glucose = st.sidebar.slider('Glucose Level', 0, 200, 120)
+    Glucose = st.sidebar.slider('Glucose Level', 0, 200, 120)
 
-    with col3:
-        BloodPressure = st.sidebar.slider('Blood Pressure value', 0, 122, 70)
+    BloodPressure = st.sidebar.slider('Blood Pressure value', 0, 122, 70)
 
-    with col1:
-        SkinThickness = st.sidebar.slider('Skin Thickness value', 0, 100, 20)
+    SkinThickness = st.sidebar.slider('Skin Thickness value', 0, 100, 20)
 
-    with col2:
-        Insulin = st.sidebar.slider('Insulin Level', 0, 846, 79)
+    Insulin = st.sidebar.slider('Insulin Level', 0, 846, 79)
 
-    with col3:
-        BMI = st.sidebar.slider('BMI value', 0, 67, 20)
+    BMI = st.sidebar.slider('BMI value', 0, 67, 20)
 
-    with col1:
-        DiabetesPedigreeFunction = st.sidebar.slider(
-            'Diabetes Pedigree Function value', 0.0, 2.4, 0.47)
+    DiabetesPedigreeFunction = st.sidebar.slider(
+        'Diabetes Pedigree Function value', 0.0, 2.4, 0.47)
 
-    with col2:
-        Age = st.sidebar.slider('Age of the Person', 21, 88, 33)
+    Age = st.sidebar.slider('Age of the Person', 21, 81, 33)
 
     # code for Prediction
     diab_diagnosis = ''
@@ -115,47 +106,36 @@ if (selected == 'Heart Disease Prediction'):
     # page title
     st.title('Heart Disease Prediction using ML')
 
-    col1, col2, col3 = st.columns(3)
+    age = st.sidebar.slider('Age', 29, 77, 54)
 
-    with col1:
-        age = st.text_input('Age')
+    sex = st.sidebar.slider('Sex', 0, 1)
 
-    with col2:
-        sex = st.text_input('Sex')
+    cp = st.sidebar.slider('Chest Pain types', 0, 1, 3)
 
-    with col3:
-        cp = st.text_input('Chest Pain types')
+    trestbps = st.sidebar.slider('Resting Blood Pressure', 94, 132, 200)
 
-    with col1:
-        trestbps = st.text_input('Resting Blood Pressure')
+    chol = st.sidebar.slider('Serum Cholestoral in mg/dl', 126, 246, 564)
 
-    with col2:
-        chol = st.text_input('Serum Cholestoral in mg/dl')
+    fbs = st.sidebar.slider('Fasting Blood Sugar > 120 mg/dl', 0, 1)
 
-    with col3:
-        fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
+    restecg = st.sidebar.slider(
+        'Resting Electrocardiographic results', 0, 1, 2)
 
-    with col1:
-        restecg = st.text_input('Resting Electrocardiographic results')
+    thalach = st.sidebar.slider(
+        'Maximum Heart Rate achieved', 71, 150, 202)
 
-    with col2:
-        thalach = st.text_input('Maximum Heart Rate achieved')
+    exang = st.sidebar.slider('Exercise Induced Angina', 0, 1)
 
-    with col3:
-        exang = st.text_input('Exercise Induced Angina')
+    oldpeak = st.sidebar.slider(
+        'ST depression induced by exercise', float(0), float(1), float(6.2))
 
-    with col1:
-        oldpeak = st.text_input('ST depression induced by exercise')
+    slope = st.sidebar.slider(
+        'Slope of the peak exercise ST segment', 0, 1, 2)
 
-    with col2:
-        slope = st.text_input('Slope of the peak exercise ST segment')
+    ca = st.sidebar.slider('Major vessels colored by flourosopy', 0, 1, 4)
 
-    with col3:
-        ca = st.text_input('Major vessels colored by flourosopy')
-
-    with col1:
-        thal = st.text_input(
-            'thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
+    thal = st.sidebar.slider(
+        'thal: 0 = normal; 1 = fixed defect; 2 = reversable defect', 0, 2, 3)
 
     # code for Prediction
     heart_diagnosis = ''
@@ -180,73 +160,53 @@ if (selected == "Parkinsons Prediction"):
     # page title
     st.title("Parkinson's Disease Prediction using ML")
 
-    col1, col2, col3, col4, col5 = st.columns(5)
+    fo = st.sidebar.slider('MDVP:Fo(Hz)', 88.333, 154.229, 260.105)
 
-    with col1:
-        fo = st.text_input('MDVP:Fo(Hz)')
+    fhi = st.sidebar.slider('MDVP:Fhi(Hz)', 102.145, 197.105, 592.030)
 
-    with col2:
-        fhi = st.text_input('MDVP:Fhi(Hz)')
+    flo = st.sidebar.slider('MDVP:Flo(Hz)', 65.476, 116.325, 239.170)
 
-    with col3:
-        flo = st.text_input('MDVP:Flo(Hz)')
+    Jitter_percent = st.sidebar.slider(
+        'MDVP:Jitter(%)', 0.00168, 0.00622, 0.03316)
 
-    with col4:
-        Jitter_percent = st.text_input('MDVP:Jitter(%)')
+    Jitter_Abs = st.sidebar.slider(
+        'MDVP:Jitter(Abs)', 0.00001, 0.00004, 0.00026)
 
-    with col5:
-        Jitter_Abs = st.text_input('MDVP:Jitter(Abs)')
+    RAP = st.sidebar.slider('MDVP:RAP', 0.00068, 0.00331, 0.02144)
 
-    with col1:
-        RAP = st.text_input('MDVP:RAP')
+    PPQ = st.sidebar.slider('MDVP:PPQ', 0.00092, 0.00345, 0.01958)
 
-    with col2:
-        PPQ = st.text_input('MDVP:PPQ')
+    DDP = st.sidebar.slider('Jitter:DDP', 0.00204, 0.00992, 0.06433)
 
-    with col3:
-        DDP = st.text_input('Jitter:DDP')
+    Shimmer = st.sidebar.slider(
+        'MDVP:Shimmer', 0.00954, 0.02971, 0.11908)
 
-    with col4:
-        Shimmer = st.text_input('MDVP:Shimmer')
+    Shimmer_dB = st.sidebar.slider(
+        'MDVP:Shimmer(dB)', 0.085, 0.282, 1.302)
 
-    with col5:
-        Shimmer_dB = st.text_input('MDVP:Shimmer(dB)')
+    APQ3 = st.sidebar.slider('Shimmer:APQ3', 0.00455, 0.01566, 0.05647)
 
-    with col1:
-        APQ3 = st.text_input('Shimmer:APQ3')
+    APQ5 = st.sidebar.slider('Shimmer:APQ5', 0.0057, 0.01788, 0.0794)
 
-    with col2:
-        APQ5 = st.text_input('Shimmer:APQ5')
+    APQ = st.sidebar.slider('MDVP:APQ', 0.00719, 0.02408, 0.13778)
 
-    with col3:
-        APQ = st.text_input('MDVP:APQ')
+    DDA = st.sidebar.slider('Shimmer:DDA', 0.01364, 0.04699, 0.16942)
 
-    with col4:
-        DDA = st.text_input('Shimmer:DDA')
+    NHR = st.sidebar.slider('NHR', 0.00065, 0.02485, 0.31482)
 
-    with col5:
-        NHR = st.text_input('NHR')
+    HNR = st.sidebar.slider('HNR', 8.441, 21.886, 33.047)
 
-    with col1:
-        HNR = st.text_input('HNR')
+    RPDE = st.sidebar.slider('RPDE', 0.256570, 0.498536, 0.685151)
 
-    with col2:
-        RPDE = st.text_input('RPDE')
+    DFA = st.sidebar.slider('DFA', 0.574282, 0.718099, 0.825288)
 
-    with col3:
-        DFA = st.text_input('DFA')
+    spread1 = st.sidebar.slider('spread1', -7.964984, -5.684397, -2.434031)
 
-    with col4:
-        spread1 = st.text_input('spread1')
+    spread2 = st.sidebar.slider('spread2', 0.006274, 0.226510, 0.450493)
 
-    with col5:
-        spread2 = st.text_input('spread2')
+    D2 = st.sidebar.slider('D2', 1.423287, 2.381826, 3.671155)
 
-    with col1:
-        D2 = st.text_input('D2')
-
-    with col2:
-        PPE = st.text_input('PPE')
+    PPE = st.sidebar.slider('PPE', 0.044539, 0.206552, 0.527367)
 
     # code for Prediction
     parkinsons_diagnosis = ''
