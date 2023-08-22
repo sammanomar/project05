@@ -108,7 +108,7 @@ if (selected == 'Heart Disease Prediction'):
 
     age = st.sidebar.slider('Age', 29, 77, 54)
 
-    sex = st.sidebar.slider('Sex', 0, 1)
+    sex = st.sidebar.slider('Sex: 1 = male; 0 = female', 0, 1)
 
     cp = st.sidebar.slider('Chest Pain types', 0, 3, 1)
 
