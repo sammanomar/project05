@@ -4,6 +4,7 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn import svm
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 
@@ -95,13 +96,13 @@ if (selected == 'Diabetes Prediction'):
 
     # chart visualisations
     st.subheader('Visualisations')
-    st.bar_chart(diabetes_dataset)
+    st.area_chart(diabetes_dataset)
 
     # separating the data and labels
     X = diabetes_dataset.drop(columns='Outcome', axis=1)
     Y = diabetes_dataset['Outcome']
 
-    # train test split
+    # Splitting the Data into Training data & Test Data
     X_train, X_test, Y_train, Y_test = train_test_split(
         X, Y, test_size=0.2, stratify=Y, random_state=2)
 
@@ -167,8 +168,36 @@ if (selected == 'Heart Disease Prediction'):
     # code for Prediction
     heart_diagnosis = ''
 
-    # creating a button for Prediction
+    # loading the csv data to a Pandas DataFrame
+    heart_data = pd.read_csv('dataset/heart.csv')
 
+    # print first 5 rows of the dataset
+    st.subheader('Training Data')
+    st.write(heart_data.head())
+
+    # chart visualisations
+    st.subheader('Visualisations')
+    st.line_chart(heart_data)
+
+    # splitting the Features and Target
+    X = heart_data.drop(columns='target', axis=1)
+    Y = heart_data['target']
+
+    # splitting the Data into Training data & Test Data
+    X_train, X_test, Y_train, Y_test = train_test_split(
+        X, Y, test_size=0.2, stratify=Y, random_state=2)
+
+    # model training
+    model = LogisticRegression()
+    # training the LogisticRegression model with Training data
+    model.fit(X_train, Y_train)
+
+    # accuracy score on the test data
+    X_test_prediction = model.predict(X_test)
+    test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
+    st.write('Accuracy score of the test data : ', test_data_accuracy)
+
+    # creating a button for Prediction
     if st.button('Heart Disease Test Result'):
         heart_prediction = heart_disease_model.predict(
             [[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
