@@ -11,9 +11,6 @@ diabetes_model = pickle.load(open(
 heart_disease_model = pickle.load(open(
     'models/heart_disease_model.sav', 'rb'))
 
-parkinsons_model = pickle.load(open(
-    'models/parkinsons_model.sav', 'rb'))
-
 
 # sidebar for navigation
 with st.sidebar:
@@ -22,9 +19,8 @@ with st.sidebar:
 
                            ['Project Summary',
                             'Diabetes Prediction',
-                            'Heart Disease Prediction',
-                            'Parkinsons Prediction'],
-                           icons=['activity', 'heart', 'person'],
+                            'Heart Disease Prediction',],
+                           icons=["", 'activity', 'heart'],
                            default_index=0)
 
 # Summary Page
@@ -152,73 +148,3 @@ if (selected == 'Heart Disease Prediction'):
             heart_diagnosis = 'The person does not have any heart disease'
 
     st.success(heart_diagnosis)
-
-
-# Parkinson's Prediction Page
-if (selected == "Parkinsons Prediction"):
-
-    # page title
-    st.title("Parkinson's Disease Prediction using ML")
-
-    fo = st.sidebar.slider('MDVP:Fo(Hz)', 88.333, 260.105, 154.229)
-
-    fhi = st.sidebar.slider('MDVP:Fhi(Hz)', 102.145, 592.030, 197.105)
-
-    flo = st.sidebar.slider('MDVP:Flo(Hz)', 65.476, 239.170, 116.325)
-
-    Jitter_percent = st.sidebar.slider(
-        'MDVP:Jitter(%)', 0.00168, 0.03316,  0.00622)
-
-    Jitter_Abs = st.sidebar.slider(
-        'MDVP:Jitter(Abs)', 0.00001, 0.00026, 0.00004)
-
-    RAP = st.sidebar.slider('MDVP:RAP', 0.00068, 0.02144, 0.00331)
-
-    PPQ = st.sidebar.slider('MDVP:PPQ', 0.00092, 0.01958, 0.00345)
-
-    DDP = st.sidebar.slider('Jitter:DDP', 0.00204, 0.06433, 0.00992)
-
-    Shimmer = st.sidebar.slider(
-        'MDVP:Shimmer', 0.00954, 0.11908, 0.02971)
-
-    Shimmer_dB = st.sidebar.slider(
-        'MDVP:Shimmer(dB)', 0.085, 1.302, 0.282)
-
-    APQ3 = st.sidebar.slider('Shimmer:APQ3', 0.00455, 0.05647, 0.01566)
-
-    APQ5 = st.sidebar.slider('Shimmer:APQ5', 0.00570, 0.07940, 0.01788)
-
-    APQ = st.sidebar.slider('MDVP:APQ', 0.00719, 0.13778, 0.02408)
-
-    DDA = st.sidebar.slider('Shimmer:DDA', 0.01364, 0.16942, 0.04699)
-
-    NHR = st.sidebar.slider('NHR', 0.00065, 0.31482, 0.02485)
-
-    HNR = st.sidebar.slider('HNR', 8.441, 33.047, 21.886)
-
-    RPDE = st.sidebar.slider('RPDE', 0.256570, 0.685151, 0.498536)
-
-    DFA = st.sidebar.slider('DFA', 0.574282, 0.825288, 0.718099)
-
-    spread1 = st.sidebar.slider('spread1', -7.964984, -2.434031, -5.684397)
-
-    spread2 = st.sidebar.slider('spread2', 0.006274, 0.450493, 0.226510)
-
-    D2 = st.sidebar.slider('D2', 1.423287, 3.671155, 2.381826)
-
-    PPE = st.sidebar.slider('PPE', 0.044539, 0.527367, 0.206552)
-
-    # code for Prediction
-    parkinsons_diagnosis = ''
-
-    # creating a button for Prediction
-    if st.button("Parkinson's Test Result"):
-        parkinsons_prediction = parkinsons_model.predict(
-            [[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ, DDP, Shimmer, Shimmer_dB, APQ3, APQ5, APQ, DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]])
-
-        if (parkinsons_prediction[0] == 1):
-            parkinsons_diagnosis = "The person has Parkinson's disease"
-        else:
-            parkinsons_diagnosis = "The person does not have Parkinson's disease"
-
-    st.success(parkinsons_diagnosis)

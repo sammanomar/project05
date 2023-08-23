@@ -50,7 +50,8 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size and to have a shorter model training time. If you are doing an image recognition project, we suggest you consider using an image shape that is 100px × 100px or 50px × 50px, to ensure the model meets the performance requirement but is smaller than 100Mb for a smoother push to GitHub. A reasonably sized image set is ~5000 images, but you can choose ~10000 lines for numeric or textual data. 
+
+* The dataset is sourced from Kaggle. We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. Each row represents a customer, each column contains a customer attribute. The data set includes information about:
 
 
 ## Business Requirements
