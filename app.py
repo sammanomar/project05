@@ -119,7 +119,7 @@ if (selected == 'Diabetes Prediction'):
 
     # chart visualisations
     st.subheader('Visualisations')
-    st.area_chart(diabetes_dataset)
+    st.bar_chart(diabetes_dataset)
 
     # separating the data and labels
     X=diabetes_dataset.drop(columns='Outcome', axis=1)
@@ -200,7 +200,7 @@ if (selected == 'Heart Disease Prediction'):
 
     # chart visualisations
     st.subheader('Visualisations')
-    st.line_chart(heart_data)
+    st.bar_chart(heart_data)
 
     # splitting the Features and Target
     X=heart_data.drop(columns='target', axis=1)
