@@ -6,12 +6,12 @@
 
 
 ## Business Requirements
-1- The client is interested in telling whether a given blood sample taken from a patient is diabetic or not.
-2- The client is interested to predict whether a patient has heart disease or not.
+- 1 The client is interested in telling whether a given blood sample taken from a female patient is diabetic or not.
+- 2 The client is interested to predict whether a patient has heart disease or not base on 13 features
 
 
 ## Hypothesis and how to validate?
-* We suspect that diabetic patient have high level of glucose in blood.
+* We suspect that diabetic female patient have high level of glucose in blood.
 - An average data study can help to investigate it
 
 * We suspect that heart disease patient have a chest pain and high heart rate.
@@ -19,11 +19,39 @@
 
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
+
+- **Business Requirement 1**: Classification
+  - We want to predict if a sample given from female patient makes her diabetic or not.
+  - We want to build a binary classifier and generate reports.
+  
+- **Business Requirement 2**: Classification
+  - We want to predict if a sample given from patient make him/her have a heart disease or not
+  - We want to build a binary classifier and generate reports.
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
+
+### Diabetes
+
+- We want an ML model to predict if a given sample from a female patient is diabetes or not, based on 8 attributes. It is a supervised model, a 2-class, single-label, classification model.
+- Our ideal outcome is to provide the medical team a faster and more reliable diagnostic for diabetes detection.
+- The model success metrics are
+  - Accuracy of 75% or above on the test set.
+- The model output is defined as a flag, indicating if the female patient has diabetes or not and the associated probability of being diabetic or not. The medical staff will do the blood smear workflow as usual and gather the required attributes for the App.
+- Heuristics: The current diagnostic needs an experienced staff and detailed inspection to distinguish between diabetic and non diabetic female patients. A blood smear sample and other attributes are collected and examined in the lab. This app can assist medical professionals in making a diagnosis, but should not be used as a substitute for a professional diagnosis.
+- The training data to fit the model comes from the [Kaggle](https://www.kaggle.com/datasets/nancyalaswad90/review).
+  - Train data - Outcome: diabetic or not; features: 8 attributes
+
+### Heart Disease
+
+- We want an ML model to predict if a given sample from patient make him/her have a heart disease or not or not, based 13 attributes. It is a supervised model, a 2-class, single-label, classification model.
+- Our ideal outcome is to provide the medical team a faster and more reliable diagnostic for heart disease detection.
+- The model success metrics are
+  - Accuracy of 75% or above on the test set.
+- The model output is defined as a flag, indicating if the patient has heart disease or not and the associated probability of suffering from a heart disease or not. The medical staff will do the blood smear workflow as usual and gather the required attributes for the App.
+- Heuristics: The current diagnostic needs an experienced staff and detailed inspection to distinguish between healthy and heart disease patients. A blood smear sample and other attributes are collected and examined in the lab. This app can assist medical professionals in making a diagnosis, but should not be used as a substitute for a professional diagnosis.
+- The training data to fit the model comes from the [Kaggle](https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci).
+  - Train data - target: heart disease or not; features: 13 attributes
 
 
 ## Dashboard Design
