@@ -1,6 +1,10 @@
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn import svm
+from sklearn.metrics import accuracy_score
 
 
 # loading the saved models
@@ -82,8 +86,35 @@ if (selected == 'Diabetes Prediction'):
     # code for Prediction
     diab_diagnosis = ''
 
-    # creating a button for Prediction
+    # loading the diabetes dataset to a pandas DataFrame
+    diabetes_dataset = pd.read_csv('dataset/diabetes.csv')
 
+    # printing the first 5 rows of the dataset
+    st.subheader('Training Data')
+    st.write(diabetes_dataset.head())
+
+    # chart visualisations
+    st.subheader('Visualisations')
+    st.bar_chart(diabetes_dataset)
+
+    # separating the data and labels
+    X = diabetes_dataset.drop(columns='Outcome', axis=1)
+    Y = diabetes_dataset['Outcome']
+
+    # train test split
+    X_train, X_test, Y_train, Y_test = train_test_split(
+        X, Y, test_size=0.2, stratify=Y, random_state=2)
+
+    # train the model
+    classifier = svm.SVC(kernel='linear')
+    classifier.fit(X_train, Y_train)
+
+    # accuracy score on the test data
+    X_test_prediction = classifier.predict(X_test)
+    test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
+    st.write('Accuracy score of the test data : ', test_data_accuracy)
+
+    # creating a button for Prediction
     if st.button('Diabetes Test Result'):
         diab_prediction = diabetes_model.predict(
             [[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
