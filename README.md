@@ -1,8 +1,8 @@
 ## Dataset Content
 
-1- The diabetes dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/nancyalaswad90/review). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. Each row represents a sample was taken from a female patient, each column contains anattribute. The samples are either diabetic or not diabetic.
+- 1 The diabetes dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/nancyalaswad90/review). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. Each row represents a sample was taken from a female patient, each column contains anattribute. The samples are either diabetic or not diabetic.
 
-2- The heart disease dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. Each row represents a patient sample, each column contains an attribute. The samples are either have a heart disease or doesn't have any heart disease.
+- 2 The heart disease dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. Each row represents a patient sample, each column contains an attribute. The samples are either have a heart disease or doesn't have any heart disease.
 
 
 ## Business Requirements
@@ -54,16 +54,48 @@
   - Train data - target: heart disease or not; features: 13 attributes
 
 
-## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
+## Dashboard Design (Streamlit App User Interface)
+
+### Page 1: Diabetes Summary
+
+- Quick project summary
+    **General Information**
+    - Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces.
+    - Early diagnosis can be accomplished through relatively inexpensive testing of blood glucose.
+    - According to [WHO](https://www.who.int/news-room/fact-sheets/detail/malaria), In 2014, 8.5% of adults aged 18 years and older had diabetes. In 2019, diabetes was the direct cause of 1.5 million deaths and 48% of all deaths due to diabetes occurred before the age of 70 years.
+    **Project Dataset**
+    - The available dataset contains 768 blood smear. The objective of the dataset is to diagnostically predict whether a patient has diabetes or not based on certain diagnostic measurements included in the dataset. 
+    - All patients here are females at least 21 years old.
+
+### Page 2: Heart Disease Summary
+
+- Quick project summary
+    **General Information**
+  - Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces.
+  - Early diagnosis can be accomplished through relatively inexpensive testing of blood glucose.
+  - According to [WHO](https://www.who.int/news-room/fact-sheets/detail/malaria), In 2014, 8.5% of adults aged 18 years and older had diabetes. In 2019, diabetes was the direct cause of 1.5 million deaths and 48% of all deaths due to diabetes occurred before the age of 70 years.
+    **Project Dataset**
+  - The available dataset contains 768 blood smear. The objective of the dataset is to diagnostically predict whether a patient has diabetes or not based on certain diagnostic measurements included in the dataset.
+  - All patients here are females at least 21 years old.
+
+### Page 3: Malaria Detector
+
+- Business requirement 2 information - "The client is interested in telling whether a given cell contains a malaria parasite or not."
+- Link to download a set of parasite-contained and uninfected cell images for live prediction.
+- User Interface with a file uploader widget. The user should upload multiple malaria cell images. It will display the image and a prediction statement, indicating if the cell is infected or not with malaria and the probability associated with this statement.
+- Table with the image name and prediction results.
+- Download button to download table.
+
+### Page 4: Project Hypothesis and Validation
+
+- Block for each project hypothesis, describe the conclusion and how you validated it.
 
 
 ## Deployment
 ### Heroku
 
 * The App live link is: <https://predict-disease-6e1bbf9de2b5.herokuapp.com>
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+* Set the runtime.txt Python version to python-3.9.17 [all stacks](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and create an App
@@ -80,22 +112,7 @@
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
+* 
 
 
-
-## Acknowledgements (optional)
-* Thank the people that provided support through this project.
 
