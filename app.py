@@ -28,6 +28,8 @@ with st.sidebar:
                             'Heart Disease Prediction',],
                            icons=['cast', 'cast',  'activity', 'heart'],
                            default_index=0)
+    st.write("This app can assist medical professionals in making a diagnosis, but should not be used as a substitute for a professional diagnosis.")
+
 
 # Summary Page
 if (selected == 'Diabetes Summary'):
@@ -84,6 +86,7 @@ if (selected == 'Diabetes Prediction'):
 
     # page title
     st.title('Diabetes Prediction using ML')
+    
 
     # getting the input data from the user
 
