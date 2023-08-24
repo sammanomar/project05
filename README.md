@@ -1,5 +1,4 @@
 ## Dataset Content
-
 - 1 The diabetes dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/nancyalaswad90/review). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. Each row represents a sample was taken from a female patient, each column contains anattribute. The samples are either diabetic or not diabetic.
 
 - 2 The heart disease dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. Each row represents a patient sample, each column contains an attribute. The samples are either have a heart disease or doesn't have any heart disease.
@@ -100,7 +99,6 @@
 ### Page 5: Project Hypothesis
 
 - Project Hypothesis and Validation
-
 
 
 ## Credits 
