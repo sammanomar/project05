@@ -161,7 +161,7 @@ if (selected == 'Heart Disease Prediction'):
 
     age=st.sidebar.slider('Age', 29, 77, 54)
 
-    sex=st.sidebar.slider('Sex: 1 = male; 0 = female', 0, 1)
+    sex=st.sidebar.slider('Sex (1 = male; 0 = female)', 0, 1)
 
     cp=st.sidebar.slider('Chest Pain types', 0, 3, 1)
 
@@ -169,7 +169,7 @@ if (selected == 'Heart Disease Prediction'):
 
     chol=st.sidebar.slider('Serum Cholestoral in mg/dl', 126, 564, 246)
 
-    fbs=st.sidebar.slider('Fasting Blood Sugar > 120 mg/dl', 0, 1)
+    fbs=st.sidebar.slider('Fasting Blood Sugar > 120 mg/dl (1 = true; 0 = false)', 0, 1)
 
     restecg=st.sidebar.slider(
         'Resting Electrocardiographic results', 0, 2, 1)
@@ -177,7 +177,7 @@ if (selected == 'Heart Disease Prediction'):
     thalach=st.sidebar.slider(
         'Maximum Heart Rate achieved', 71, 202, 150)
 
-    exang=st.sidebar.slider('Exercise Induced Angina', 0, 1)
+    exang=st.sidebar.slider('Exercise Induced Angina (1 = yes; 0 = no)', 0, 1)
 
     oldpeak=st.sidebar.slider(
         'ST depression induced by exercise', float(0), float(6.2), float(1))
@@ -188,7 +188,7 @@ if (selected == 'Heart Disease Prediction'):
     ca=st.sidebar.slider('Major vessels colored by flourosopy', 0, 4, 1)
 
     thal=st.sidebar.slider(
-        'thal: 0 = normal; 1 = fixed defect; 2 = reversable defect', 0, 3, 2)
+        'thal  (0 = normal; 1 = fixed defect; 2 = reversable defect)', 0, 3, 2)
 
     # code for Prediction
     heart_diagnosis=''
