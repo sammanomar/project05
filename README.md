@@ -99,7 +99,7 @@
 
 ## Credits 
 * WalkthroughProject01 (Malaria Detector)
-* WalkthroughProject01 (churnometer)
+* WalkthroughProject02 (churnometer)
 * Kaggle website
 * Stackoverflow
 * Heroku

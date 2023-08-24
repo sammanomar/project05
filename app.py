@@ -25,13 +25,14 @@ with st.sidebar:
                            ['Diabetes Summary',
                             'Heart Disease Summary',
                             'Diabetes Prediction',
-                            'Heart Disease Prediction',],
-                           icons=['cast', 'cast',  'activity', 'heart'],
+                            'Heart Disease Prediction',
+                            'Project Hypothesis'],
+                           icons=['cast', 'cast',  'activity', 'heart', 'lightbulb-fill'],
                            default_index=0)
     st.write("This app can assist medical professionals in making a diagnosis, but should not be used as a substitute for a professional diagnosis.")
 
 
-# Summary Page
+# Diabetes Summary Page
 if (selected == 'Diabetes Summary'):
     st.write("### Quick Project Summary")
 
@@ -56,6 +57,7 @@ if (selected == 'Diabetes Summary'):
         f"The project has 1 business requirements:\n"
         f"* 1 - The client is interested in telling whether a given blood sample taken from a patient is diabetic or not. "
     )
+# Heart Disease Summary Page    
 if (selected == 'Heart Disease Summary'):
     st.write("### Quick Project Summary")
 
@@ -231,3 +233,15 @@ if (selected == 'Heart Disease Prediction'):
             heart_diagnosis='The person does not have any heart disease'
 
     st.success(heart_diagnosis)
+
+# Project Hypothesis Page
+if (selected == 'Project Hypothesis'):
+    st.write("### Project Hypothesis and Validation")
+
+    st.success(
+        f"* We suspect that diabetic female patient have usually a high level of glucose in blood. \n"
+        f" Our score of our test data has shown minimum %77 accuracy of our hypothesis.\n\n"
+        f"* We suspect that heart disease patient have a chest pain and high heart rate. \n"
+        f" Our score of our test data has shown minimum %82 accuracy of our hypothesis."
+       
+    )
