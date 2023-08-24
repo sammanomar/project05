@@ -103,12 +103,12 @@
 
 ## Credits 
 * WalkthroughProject01 (Malaria Detector)
-* WalkthroughProject02 (churnometer)
+* WalkthroughProject02 (Churnometer)
 * Kaggle website
 * Stackoverflow
 * Heroku
 * bootstrap icons
-* WHO
+* World Health Organization
 * Streamlit
 
 
