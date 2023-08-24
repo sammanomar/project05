@@ -97,6 +97,12 @@
 - Heart disease test result button
 - Business requirement 2 information - "The client is interested to predict whether a patient has heart disease or not base on 13 features"
 
+### Page 5: Project Hypothesis
+
+- Project Hypothesis and Validation
+
+
+
 ## Credits 
 * WalkthroughProject01 (Malaria Detector)
 * WalkthroughProject02 (churnometer)
