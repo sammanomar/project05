@@ -58,22 +58,22 @@
 ### Page 1: Diabetes Summary
 
 - Quick project summary
-    **General Information**
+* General Information
   - Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces.
   - Early diagnosis can be accomplished through relatively inexpensive testing of blood glucose.
-  - According to [WHO](https://www.who.int/news-room/fact-sheets/detail/malaria), In 2014, 8.5% of adults aged 18 years and older had diabetes. In 2019, diabetes was the direct cause of 1.5 million deaths and 48% of all deaths due to diabetes occurred before the age of 70 years.
-  **Project Dataset**
-  - The available dataset contains 768 blood smear. The objective of the dataset is to diagnostically predict whether a patient has diabetes or not based on certain diagnostic measurements included in the dataset. 
+  - According to [WHO](https://www.who.int/news-room/fact-sheets/detail/diabetes), In 2014, 8.5% of adults aged 18 years and older had diabetes. In 2019, diabetes was the direct cause of 1.5 million deaths and 48% of all deaths due to diabetes occurred before the age of 70 years.
+* Project Dataset
+  - The available dataset contains 768 sample. The objective of the dataset is to diagnostically predict whether a female patient has diabetes or not based on certain diagnostic measurements included in the dataset. 
   - All patients here are females at least 21 years old.
 
 ### Page 2: Heart Disease Summary
 
 - Quick project summary
-    **General Information**
+* General Information
   - Heart disease describes a range of conditions that affect the heart. Heart diseases include: Blood vessel disease, such as coronary artery disease. Irregular heartbeats (arrhythmias) Heart problems you're born with (congenital heart) defects
   - This database contains 76 attributes, but all published experiments refer to using a subset of 13 of them. In particular, the Cleveland database is the only one that has been used by ML researchers to this date.
   - According to [WHO](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)#:~:text=Cardiovascular%20diseases%20(CVDs)%20are%20the,%2D%20and%20middle%2Dincome%20countries.), An estimated 17.9 million people died from CVDs in 2019, representing 32% of all global deaths. Of these deaths, 85% were due to heart attack and stroke. Over three quarters of CVD deaths take place in low- and middle-income "countries.
-    **Project Dataset**
+* Project Dataset**
   - The available dataset contains 303 sample taken and gathered by Cleveland UCI with 13 attribute.
 
 ### Page 3: Diabetes Prediction

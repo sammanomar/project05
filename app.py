@@ -240,7 +240,7 @@ if (selected == 'Project Hypothesis'):
 
     st.success(
         f"* We suspect that diabetic female patients have usually a high level of glucose in blood. \n"
-        f" Our score of our test data has shown minimum %77 accuracy.\n\n"
+        f" Our test data score has shown minimum %77 accuracy.\n\n"
         f"* We suspect that heart disease patients have a chest pain and high heart rate. \n"
-        f" Our score of our test data has shown minimum %82 accuracy."  
+        f" Our test data score has shown minimum %82 accuracy."  
     )
