@@ -41,12 +41,12 @@ if (selected == 'Diabetes Summary'):
         f"* Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or "
         f"when the body cannot effectively use the insulin it produces.\n"
         f"* Early diagnosis can be accomplished through relatively inexpensive testing of blood glucose.\n"
-        f"* According to [WHO](https://www.who.int/news-room/fact-sheets/detail/malaria), "
+        f"* According to [WHO](https://www.who.int/news-room/fact-sheets/detail/diabetes), "
         f"In 2014, 8.5% of adults aged 18 years and older had diabetes. In 2019, diabetes was the direct cause "
         f"of 1.5 million deaths and 48% of all deaths due to diabetes occurred before the age of 70 years.\n\n"
         f"**Project Dataset**\n"
-        f"* The available dataset contains 768 blood smear. The objective of the dataset is to diagnostically predict "
-        f"whether a patient has diabetes or not based on certain diagnostic measurements included in the dataset. "
+        f"* The available dataset contains 768 sample. The objective of the dataset is to diagnostically predict "
+        f"whether a female patient has diabetes or not based on certain diagnostic measurements included in the dataset. "
         f"All patients here are females at least 21 years old.")
 
     st.write(
@@ -55,7 +55,7 @@ if (selected == 'Diabetes Summary'):
 
     st.success(
         f"The project has 1 business requirements:\n"
-        f"* 1 - The client is interested in telling whether a given blood sample taken from a patient is diabetic or not. "
+        f"* The client is interested in telling whether a given sample taken from a female patient is diabetic or not. "
     )
 # Heart Disease Summary Page    
 if (selected == 'Heart Disease Summary'):
@@ -80,7 +80,7 @@ if (selected == 'Heart Disease Summary'):
 
     st.success(
         f"The project has 1 business requirements:\n"
-        f"* 1 - The client is interested to predict whether a patient has heart disease or not."
+        f"* The client is interested to predict whether a patient has heart disease or not."
     )
 
 # Diabetes Prediction Page
@@ -239,9 +239,8 @@ if (selected == 'Project Hypothesis'):
     st.write("### Project Hypothesis and Validation")
 
     st.success(
-        f"* We suspect that diabetic female patient have usually a high level of glucose in blood. \n"
-        f" Our score of our test data has shown minimum %77 accuracy of our hypothesis.\n\n"
-        f"* We suspect that heart disease patient have a chest pain and high heart rate. \n"
-        f" Our score of our test data has shown minimum %82 accuracy of our hypothesis."
-       
+        f"* We suspect that diabetic female patients have usually a high level of glucose in blood. \n"
+        f" Our score of our test data has shown minimum %77 accuracy.\n\n"
+        f"* We suspect that heart disease patients have a chest pain and high heart rate. \n"
+        f" Our score of our test data has shown minimum %82 accuracy."  
     )
